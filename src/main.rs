@@ -77,8 +77,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .expect("CATEGORY_ID must be a valid u64");
 
     let intents = GatewayIntents::GUILD_VOICE_STATES | GatewayIntents::GUILDS;
-
-
+    
     let framework = poise::Framework::builder()
         .options(poise::FrameworkOptions {
             commands: vec![slowmode()],
